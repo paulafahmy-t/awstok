@@ -211,7 +211,6 @@ function show_help() {
     echo "Commands:"
     echo "  refresh       - Runs a single, non-interactive refresh cycle."
     echo "  login         - Runs an interactive login to refresh AWS credentials via MFA."
-    echo "  check         - Attempts a refresh, showing a GUI prompt on failure."
     echo "  gt            - Extracts and displays the current token from your NuGet config."
     echo "  help          - Shows this help message."
     echo ""
