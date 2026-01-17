@@ -70,3 +70,18 @@ When you install `awstok` via Homebrew, it automatically configures a background
     ```sh
     brew services stop awstok
     ```
+
+## Upgrage
+
+```sh
+brew update
+brew upgrade awstok
+brew services restart awstok
+```
+
+## Uninstall
+
+```sh
+brew services stop awstok
+brew uninstall awstok
+```
