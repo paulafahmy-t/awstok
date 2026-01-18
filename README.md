@@ -71,7 +71,24 @@ When you install `awstok` via Homebrew, it automatically configures a background
     brew services stop awstok
     ```
 
-## Upgrage
+## ⚠️ Note on .NET Versions & IDE Compatibility
+Because awstok depends on .NET, Homebrew may install the latest version of the .NET SDK (e.g., .NET 10) into its own directory (/opt/homebrew). This can sometimes cause JetBrains Rider or Visual Studio to "lose track" of your existing .NET 8 or .NET 6 installations.
+
+If Rider shows **"SDK not found" errors after installation**:
+
+1. Open Rider Settings (Cmd + ,).
+2. Go to Build, Execution, Deployment > Toolset and Build.
+3. Change the .NET CLI executable path from the Homebrew path back to the official Microsoft path:
+  - Correct path: `/usr/local/share/dotnet/dotnet`
+4. Restart Rider.
+
+If you want your Terminal to prioritize your original .NET installation: Add this line to the end of your `~/.zshrc` or `~/.bash_profile`:
+
+```sh
+export PATH="/usr/local/share/dotnet:$PATH"
+```
+
+## Upgrade
 
 ```sh
 brew update
